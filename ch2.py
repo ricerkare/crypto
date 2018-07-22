@@ -1,4 +1,7 @@
+# Nota bene: This will not work on Python 2.7 (most likely because zip behaves differently)
+
 import binascii
+from homebrewed_functions import *
 
 string0 = binascii.unhexlify("1c0111001f010100061a024b53535009181c")
 string1 = binascii.unhexlify("686974207468652062756c6c277320657965")
