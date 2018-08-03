@@ -11,7 +11,7 @@ def single_char_xors(msg):
         yield [chr(i).encode('utf-8'), xor(msg, (chr(i)*len(msg)).encode('utf-8'))]
 
 # For byte strings msg, key
-def repeating_xor(msg, key): 
+def repeating_key_xor(msg, key): 
     return ''.join([chr(msg[i] ^ key[i%len(key)]) for i in range(len(msg))]).encode('utf-8', 'replace')
 
 # Assumes there is at least one three-letter word in the string S. Doesn't look up contractions (yet).
